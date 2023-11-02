@@ -25,14 +25,14 @@ pipeline {
     }
 }
 // Script //
-node {
-    stage('Build') {
-        echo 'Building....'
-    }
-    stage('Test') {
-           echo 'Testing....'
-        }
-    stage('Deploy') {
-        echo 'Deploying....'
-    }
-}
+// node {
+//     stage('Build') {
+//         echo 'Building....'
+//     }
+//     stage('Test') {
+//            echo 'Testing....'
+//         }
+//     stage('Deploy') {
+//         echo 'Deploying....'
+//     }
+// }

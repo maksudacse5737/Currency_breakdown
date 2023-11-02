@@ -5,13 +5,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
-                sh "npm install"
-                try {
-                  sh "npm run currency_breakdown.js" 
-                } catch (Exception err) {
-                  currentBuild.result = 'UNSTABLE'
-                }
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed'

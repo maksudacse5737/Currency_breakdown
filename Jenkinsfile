@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
-                sh 'npm run build'
+                sh 'npm run currency_breakdown.js'
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed'

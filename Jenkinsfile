@@ -8,7 +8,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
                 sh 'npm cache clean --force'
                 sh 'npm rm -rf node_modules && rm package-lock.json'
-                sh 'npm install -g'
+                sh 'npm install'
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed yes'

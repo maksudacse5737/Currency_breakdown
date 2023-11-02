@@ -9,7 +9,7 @@ pipeline {
                 sh 'ls'
                 sh 'npm run build'
                 echo 'building..'
-                echo 'schedule added'
+                echo 'schedule added here'
             }
         }
         stage('Test') {

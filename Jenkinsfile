@@ -6,10 +6,9 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
-                sh 'npm install -g npm@latest'
                 sh 'npm cache clean --force'
                 sh 'npm rm -rf node_modules && rm package-lock.json'
-                sh 'npm install'
+                sh 'npm install -g'
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed yes'

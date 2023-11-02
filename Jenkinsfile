@@ -9,7 +9,7 @@ pipeline {
                 sh 'npm cache clean --force'
                 sh 'npm rm -rf node_modules && rm package-lock.json'
                 sh 'npm install'
-                sh "npm run currency_breakdown.js" 
+                sh 'npm run build' 
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed yes'

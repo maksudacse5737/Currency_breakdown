@@ -9,7 +9,7 @@ pipeline {
                 sh "npm run currency_breakdown.js" 
                 echo 'building..'
                 echo 'schedule added here'
-                echo 'changed'
+                echo 'changed yes'
             }
         }
         stage('Test') {

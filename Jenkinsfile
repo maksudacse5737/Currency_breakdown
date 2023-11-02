@@ -10,6 +10,7 @@ pipeline {
                 sh 'npm run build'
                 echo 'building..'
                 echo 'schedule added here'
+                echo 'changed'
             }
         }
         stage('Test') {

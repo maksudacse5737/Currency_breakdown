@@ -6,7 +6,6 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
-                sh "npm run currency_breakdown.js" 
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed yes'
@@ -14,6 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh "npm run currency_breakdown.js" 
                 echo 'Testing..'
             }
         }

@@ -5,9 +5,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pwd'
-                sh 'ls'
-                sh 'npm run currency_breakdown.js'
+                git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
+                sh "npm install"
+                try {
+                  sh "npm run currency_breakdown.js" 
+                } catch (Exception err) {
+                  currentBuild.result = 'UNSTABLE'
+                }
                 echo 'building..'
                 echo 'schedule added here'
                 echo 'changed'
@@ -31,8 +35,14 @@ node {
         echo 'Building....'
     }
     stage('Test') {
-        echo 'Building....'
-    }
+        git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
+        sh "npm install"
+        try {
+          sh "npm run currency_breakdown.js" 
+        } catch (Exception err) {
+          currentBuild.result = 'UNSTABLE'
+        }
+        }
     stage('Deploy') {
         echo 'Deploying....'
     }

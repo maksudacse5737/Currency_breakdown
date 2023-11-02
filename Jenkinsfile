@@ -29,7 +29,6 @@ node {
     }
     stage('Test') {
         git branch: 'main', url: 'https://github.com/maksudacse5737/Currency_breakdown.git'
-        sh "npm install"
         try {
           sh "npm run currency_breakdown.js" 
         } catch (Exception err) {
